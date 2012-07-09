@@ -1,0 +1,11 @@
+Future ideas:
+
+- Integrate scanner and display (custom app)
+- Single player aganst the clock
+- Multiple multi-player games
+- Constant updates using socket.io
+- NFC hidden in objects
+- Make it harder: spread out markers, hide progress
+- Even harder: moving codes (wheel, humans, animals)
+
+P.S. Hunt the Wumpus

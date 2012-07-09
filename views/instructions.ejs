@@ -1,0 +1,22 @@
+
+  <div>
+  <div id="other"><h1>Instructions</h1>
+  
+  <p>Welcome to <%= title %>, <%=username %>!</p>
+
+  <p>You see in front of you six QR codes, each of which represents a letter. Your mission is to unscramble the intercepted six-letter code word. </p>
+  
+  <p>To do this, scan each in turn and the page you get to will tell you which letter that particular QR code corresponds to.</p>
+
+  <p>Once you have 'intercepted' all the letters, switch to decrypt mode and then re-scan all the letters in the correct order.</p>
+  
+  <p>You can play simultaneously with your friends, and you will see an indicator of their progress at the bottom of each page. First to correctly unscramble their word wins.</p>
+  
+  </div>
+
+  <p id="button"><a href="/c/<%= no %>?new=multi">Start game</a><br /></p>
+  </div>
+	
+  <div id="logout">
+    <p>You are logged in as <%= username %>.</p> <p><a href="/q/logout/<%=no%>">Log out</a></p>
+  </div>

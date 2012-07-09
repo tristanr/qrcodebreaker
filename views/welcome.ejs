@@ -1,0 +1,12 @@
+<h1><%= title %></h1>
+  <p>Welcome to <%= title %>, <%=username %>!</p>
+
+  <div>
+  <p id="button"><a href="/q/instructions/<%=no%>">Instructions</a></p>
+<!--  <a href="/c/<%= no %>?new=solo">New solo game</a><br /> -->
+  <p id="button"><a href="/c/<%= no %>?new=multi">Start game</a><br /></p>
+  </div>
+	
+  <div id="logout">
+    <p>You are logged in as <%= username %>.</p> <p><a href="/q/logout/<%=no%>">Log out</a></p>
+  </div>

@@ -35,3 +35,15 @@ exports.testScan = function(test){
     test.equal(game.scanned, 'UG');
     test.done();
 };
+
+exports.testGameArray = function(test){
+	var games = new Array();
+	var game = new qrgame.QRGame('TURING');
+    test.ok(typeof(game) != 'undefined');
+    games['foo'] = game;
+    test.ok(games['foo'] != undefined);
+    test.ok(games['bar'] == undefined);
+    console.log(games);
+    test.done();
+};
+

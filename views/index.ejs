@@ -1,6 +1,52 @@
-<h1><%= title %></h1>
+
+  <% if (multiplayer_games[username].mode == 'intercept') { %>
+    <p id="mode"><strong>Intercept mode</strong></p>
+	<p id="button">
+	<a href="/q/decrypt">Switch to decrypt mode</a>
+	</p>
+  <% } else { %>
+    <p id="mode"><strong>Decrypt mode</strong></p>
+	<p id="button">
+	<a href="/q/intercept">Switch to intercept mode</a>
+	</p>
+  <% } %>
+
+  <% if(message) {%>
+  <p class="alert"><%= message %></p>
+  <% } %>
+  
+	<div id="justscanned">
+  <p>You just 
+  <% if (multiplayer_games[username].mode == 'intercept') { %>
+    intercepted
+  <% } else { %>
+    decrypted
+  <% } %>
+  </p>
+		<p id="bigletter"><%= letter %></p>
+	</div>
+	
+  <% if (multiplayer_games[username].mode == 'decrypt') { %>
+    <p id="scanned">You have successfully decrypted:<br/>
+    <span id="sofar"><strong><%= multiplayer_games[username].guessed %></strong></span></p>
+  <% } %>
+
+  <p id="scanned">You have intercepted:<br/>
+    <span id="sofar"><strong><%= multiplayer_games[username].scanned %></strong></span></p>
+  
+	<p id="others">
+	Other players:<br />
+<% for(var i=0; i<players.length; i++) {%>
+   <strong><%= players[i] %></strong>: <span class="crosses">(<%=multiplayer_games[players[i]].scanned.length %> i, <%=multiplayer_games[players[i]].guessed.length %> d)</span><br/>
+<% } %>
+	</p>
+
+
+<!-- <h1><%= title %></h1>
   <p>Welcome to <%= title %>, <%=username %>!</p>
 
-  <div>
-    You are logged in as <%= username %>. <a href="logout">Log out</a>
+-->
+
+  <div id="logout">
+    <p>You are logged in as <%= username %>.</p> <p><a href="/q/logout/<%=no%>">Log out</a></p>
   </div>

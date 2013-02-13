@@ -1,10 +1,11 @@
-word_list = [ 'TURING', 'ENIGMA', 'HACKER' ];
+word_list = [ 'TURING', 'ENIGMA', 'HACKER', 'HITLER', 'CIPHER' ];
 
-exports.QRGame = function(word) {
-    this.word = "TURING";
+exports.QRGame = function() {
+    this.word = word_list[Math.floor(Math.random()*word_list.length)];
     this.scrambled = this.generateScrambled();
     this.scanned = "";
     this.guessed = "";
+    this.mode = "intercept";
 }
 
 exports.QRGame.prototype.generateScrambled = function() {

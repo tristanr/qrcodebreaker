@@ -2,11 +2,11 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>MMPRPSSL login</title>
+	<title>QR Codebreakers login</title>
 </head>
 <body>
 <p><strong><%= message %></strong></p>
-<form  method="post" action="login">
+<form  method="post" action="/q/login/<%= no %>">
 	Enter your nickname: <input type="text" name="nick" />
 	<input type="submit" value="Play!" />
 </form>
